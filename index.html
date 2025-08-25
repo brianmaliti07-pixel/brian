@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Styled Web Page</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a class="active" href="MyWebsite.html">Home</a></li>
+            <li><a href="News.html">News</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <h1>Welcome to My Home Page!</h1>
+    <p>This is a much more stylish web page, thanks to CSS! We've changed the background color, font, and made the heading and paragraph look nicer.</p>
+    <p>You can experiment with different colors, fonts, and sizes by changing the values in the `&lt;style&gt;` section.</p>
+	    <h1>My Favorite Hobbies</h1>
+
+    <ul>
+        <li>Reading books (especially sci-fi and fantasy)</li>
+        <li>Hiking and exploring nature trails</li>
+        <li>Cooking and trying new recipes</li>
+        <li>Playing board games with friends</li>
+        <li>Learning new programming languages</li>
+        <li>Photography and capturing landscapes</li>
+    </ul>
+
+    <h1>Things to Buy at the Grocery Store</h1>
+
+    <ul>
+        <li>Milk</li>
+        <li>Eggs</li>
+        <li>Bread</li>
+        <li>Fresh Vegetables
+            <ul>
+                <li>Spinach</li>
+                <li>Tomatoes</li>
+                <li>Bell Peppers</li>
+            </ul>
+        </li>
+        <li>Fruit</li>
+    </ul>
+	    <h1>Our Top Products</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Availability</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Laptop Pro X</td>
+                <td>Electronics</td>
+                <td>$1200</td>
+                <td>In Stock</td>
+            </tr>
+            <tr>
+                <td>Ergonomic Chair</td>
+                <td>Office Furniture</td>
+                <td>$350</td>
+                <td>Low Stock</td>
+            </tr>
+            <tr>
+                <td>Wireless Headphones</td>
+                <td>Audio</td>
+                <td>$150</td>
+                <td>In Stock</td>
+            </tr>
+            <tr>
+                <td>Smartwatch Deluxe</td>
+                <td>Wearables</td>
+                <td>$299</td>
+                <td>Out of Stock</td>
+            </tr>
+            <tr>
+                <td>Mechanical Keyboard</td>
+                <td>Peripherals</td>
+                <td>$110</td>
+                <td>In Stock</td>
+            </tr>
+        </tbody>
+    </table>
+	    <h1>Steps to Make a Great Cup of Coffee</h1>
+
+    <ol>
+        <li>Start with fresh, high-quality coffee beans.</li>
+        <li>Grind the beans just before brewing to a consistency appropriate for your brewing method.</li>
+        <li>Heat fresh, filtered water to the optimal temperature (around 90-96°C or 195-205°F).</li>
+        <li>Choose your preferred brewing method (e.g., French press, pour-over, espresso).</li>
+        <li>Carefully measure your coffee-to-water ratio.</li>
+        <li>Pour the hot water over the grounds evenly.</li>
+        <li>Allow the coffee to steep for the recommended time.
+            <ol>
+                <li>French Press: 4 minutes</li>
+                <li>Pour Over: 2-3 minutes</li>
+                <li>Espresso: 25-30 seconds</li>
+            </ol>
+        </li>
+        <li>Serve immediately and enjoy!</li>
+    </ol>
+
+    <h1>Top 3 Travel Destinations</h1>
+    <ol>
+        <li>Kyoto, Japan</li>
+        <li>Machu Picchu, Peru</li>
+        <li>The Fjords, Norway</li>
+    </ol>
+    <div class="image-container">
+        <h2>Local Image Example</h2>
+        <p>This image is assumed to be stored in the same folder as your HTML file. You just need to specify its filename.</p>
+        <img src="mountain.jpg" alt="A majestic mountain peak with snow and clear skies.">
+        <p>If the image file named `mountain.jpg` is in the same directory as this `html` file, it will display above. If not, you'll see the alt text.</p>
+    </div>
+
+    <div class="image-container">
+        <h2>External Image Example</h2>
+        <p>This image is loaded from a URL on the internet. Make sure the URL is valid and publicly accessible.</p>
+        <img src="https://picsum.photos/600/400" alt="Random image from Lorem Picsum service.">
+        <p>The image above is fetched directly from an online service. This is useful for images hosted on a server or a CDN.</p>
+    </div>
+
+    <div class="image-container">
+        <h2>Image with Text Wrap</h2>
+        <p><img class="small-image" src="https://picsum.photos/200/200" alt="A small random image">This paragraph demonstrates how you can wrap text around an image. By using the `float` CSS property, the image can be moved to one side, and the text will flow around it. This is a common layout technique for articles and blog posts where you want the image to be integrated more tightly with the content, rather than simply sitting above or below it. It helps in creating a more visually engaging and compact layout for your content.</p>
+        <div class="clearfix"></div> </div>
+		
+		    <div class="video-container">
+        <h2>Basic Video Player with Controls</h2>
+        <p>This is the simplest way to embed a video. The `controls` attribute adds the play/pause button, volume, fullscreen toggle, etc.</p>
+        <video controls poster="https://picsum.photos/600/400?random=1">
+            <source src="sample-video.mp4" type="video/mp4">
+            <source src="sample-video.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+        <p><strong>Note:</strong> For this to work, you need a video file named `sample-video.mp4` (and ideally `sample-video.webm`) in the same folder as your HTML file. If not, you will see the message "Your browser does not support the video tag." or a broken video icon.</p>
+    </div>
+
+    <div class="video-container">
+        <h2>Autoplay, Muted, and Looping Video (Background Video)</h2>
+        <p>Videos that autoplay are often muted by default for a better user experience, as unmuted autoplay can be annoying. The `loop` attribute makes it play repeatedly.</p>
+        <video autoplay loop muted poster="https://picsum.photos/600/400?random=2">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+        <p>This example uses a public sample video from W3Schools. Notice it starts playing automatically, but without sound, and will repeat.</p>
+    </div>
+
+</body>
+</html>
