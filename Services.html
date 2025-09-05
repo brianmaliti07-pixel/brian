@@ -132,6 +132,19 @@
     <section id="services">
   <h2>Our Services</h2>
 
+        <style>
+/* Fix only these 4 service images on the INDEX slider */
+.slider img[src="PREMIUM%20CARWASH.jpeg"],
+.slider img[src="MAKE%20YOUR%20CAR%20SHINE.jpeg"],
+.slider img[src="CLEANING%20OF%20ENGINE.jpeg"],
+.slider img[src="CAR%20DUST%20AND%20SEWAGE%20PROOF.jpeg"] {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+</style>
+        
   <div class="slider-container">
     <button class="prev">&#10094;</button>
     <div class="slider">
@@ -278,6 +291,7 @@ startServicesAutoSlide();
 </body>
 
 </html>
+
 
 
 
