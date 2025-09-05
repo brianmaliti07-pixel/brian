@@ -132,8 +132,44 @@
     <section id="services">
   <h2>Our Services</h2>
 
-        <style>
-/* Fix only these 4 service images on the INDEX slider */
+<style>
+/* === General slider styles for services === */
+.slider-container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+.slide img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* === Fix only the 4 service images that looked off === */
 .slider img[src="PREMIUM%20CARWASH.jpeg"],
 .slider img[src="MAKE%20YOUR%20CAR%20SHINE.jpeg"],
 .slider img[src="CLEANING%20OF%20ENGINE.jpeg"],
@@ -291,6 +327,7 @@ startServicesAutoSlide();
 </body>
 
 </html>
+
 
 
 
