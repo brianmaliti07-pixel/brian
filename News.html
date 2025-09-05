@@ -107,35 +107,122 @@
 
 <section id="news">
   <h2>Latest News</h2>
-  <div class="slider-container news-slider">
+
+  <div class="slider-container">
     <button class="prev">&#10094;</button>
     <div class="slider">
+
       <div class="slide">
         <img src="AUDI%20RS3.jpeg" alt="Audi RS3">
         <p>Audi RS3 – Compact sports car with turbocharged performance.</p>
       </div>
+
       <div class="slide">
         <img src="AUDI%20RS6%20GT.jpeg" alt="Audi RS6 GT">
         <p>Audi RS6 GT – High-performance estate with aggressive styling.</p>
       </div>
+
       <div class="slide">
-        <img src="BMW%20M3%20TOURING%20XDRIVE.jpeg" alt="BMW M3 Touring">
-        <p>BMW M3 Touring – Sporty wagon with xDrive all-wheel drive.</p>
+        <img src="BMW%20M3%20TOURING%20XDRIVE.jpeg" alt="BMW M3 Touring xDrive">
+        <p>BMW M3 Touring xDrive – Sporty wagon with all-wheel drive.</p>
       </div>
+
       <div class="slide">
         <img src="BMW%20M5.jpeg" alt="BMW M5">
-        <p>BMW M5 – Luxury sedan with V8 twin-turbocharged power.</p>
+        <p>BMW M5 – Luxury sedan with powerful twin-turbo V8 engine.</p>
       </div>
+
       <div class="slide">
-        <img src="MERCEDES-AMG%20GT%20BLACK%20SERIES.jpeg" alt="Mercedes-AMG GT Black Series">
-        <p>Mercedes-AMG GT Black Series – Track beast with raw power.</p>
+        <img src="MERCEDES-AMG%20GT%20BLACK%20SERIES.jpeg" alt="Mercedes AMG GT Black Series">
+        <p>Mercedes AMG GT Black Series – Track beast with raw power.</p>
       </div>
+
     </div>
     <button class="next">&#10095;</button>
   </div>
 </section>
+
+<style>
+.slider-container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+.slide img {
+  width: 80%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+</style>
+
+<script>
+const newsSlider = document.querySelector('#news .slider');
+const newsSlides = document.querySelectorAll('#news .slide');
+const newsPrev = document.querySelector('#news .prev');
+const newsNext = document.querySelector('#news .next');
+
+let newsIndex = 0;
+let newsAutoSlide;
+
+function showNewsSlide(i) {
+  if (i >= newsSlides.length) newsIndex = 0;
+  if (i < 0) newsIndex = newsSlides.length - 1;
+  newsSlider.style.transform = `translateX(${-newsIndex * 100}%)`;
+}
+
+function startNewsAutoSlide() {
+  newsAutoSlide = setInterval(() => {
+    newsIndex++;
+    showNewsSlide(newsIndex);
+  }, 5000);
+}
+
+function resetNewsAutoSlide() {
+  clearInterval(newsAutoSlide);
+  startNewsAutoSlide();
+}
+
+newsNext.addEventListener('click', () => {
+  newsIndex++;
+  showNewsSlide(newsIndex);
+  resetNewsAutoSlide();
+});
+
+newsPrev.addEventListener('click', () => {
+  newsIndex--;
+  showNewsSlide(newsIndex);
+  resetNewsAutoSlide();
+});
+
+startNewsAutoSlide();
+</script>
     
 </html>
+
 
 
 
