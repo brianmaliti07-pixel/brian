@@ -99,10 +99,137 @@
 <hr>
  </section>
 
+<section id="blog">
+  <h2>Car Blog Showcase</h2>
+
+  <div class="slider-container">
+    <button class="prev">&#10094;</button>
+    <div class="slider">
+      
+      <div class="slide">
+        <img src="BLACK%20BMW%20X6%20SUV.jpeg" alt="BMW X6 SUV">
+        <p>BMW X6 SUV – Bold luxury SUV with coupe-inspired styling.</p>
+      </div>
+
+      <div class="slide">
+        <img src="BLACK%20CAR.jpeg" alt="Black Car">
+        <p>BMW 7 Series – Executive sedan offering unmatched comfort and style.</p>
+      </div>
+
+      <div class="slide">
+        <img src="BMW%20335i.jpeg" alt="BMW 335i">
+        <p>BMW 335i – Compact sports sedan with turbocharged performance.</p>
+      </div>
+
+      <div class="slide">
+        <img src="BMW%20CABRIOLET.jpeg" alt="BMW Cabriolet">
+        <p>BMW Cabriolet – Open-top driving experience with German engineering.</p>
+      </div>
+
+      <div class="slide">
+        <img src="BMW%20Z4.jpeg" alt="BMW Z4">
+        <p>BMW Z4 – Stylish roadster with sharp handling and power.</p>
+      </div>
+
+      <div class="slide">
+        <img src="BUGATTI%20VEYRON%20VITESSE.jpeg" alt="Bugatti Veyron Vitesse">
+        <p>Bugatti Veyron Vitesse – Hypercar with breathtaking speed and exclusivity.</p>
+      </div>
+
+      <div class="slide">
+        <img src="MERCEDES%20DTM.jpeg" alt="Mercedes DTM">
+        <p>Mercedes DTM – Track-focused racer with motorsport pedigree.</p>
+      </div>
+
+      <div class="slide">
+        <img src="MERCEDES%20MCLAREN%20SLR.jpeg" alt="Mercedes McLaren SLR">
+        <p>Mercedes McLaren SLR – Legendary collaboration of performance and luxury.</p>
+      </div>
+
+      <div class="slide">
+        <img src="VOLKSWAGEN%20GOLF%20R.jpeg" alt="Volkswagen Golf R">
+        <p>Volkswagen Golf R – Hot hatch with AWD and turbocharged power.</p>
+      </div>
+
+      <div class="slide">
+        <img src="VW%20GOLF%20GTI.jpeg" alt="VW Golf GTI">
+        <p>Volkswagen Golf GTI – The original hot hatch, sporty and practical.</p>
+      </div>
+
+    </div>
+    <button class="next">&#10095;</button>
+  </div>
+</section>
+
+<style>
+.slider-container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.slide img {
+  width: 80%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+</style>
+
+<script>
+const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+let index = 0;
+
+function showSlide(i) {
+  if (i >= slides.length) index = 0;
+  if (i < 0) index = slides.length - 1;
+  slider.style.transform = `translateX(${-index * 100}%)`;
+}
+
+nextBtn.addEventListener('click', () => {
+  index++;
+  showSlide(index);
+});
+
+prevBtn.addEventListener('click', () => {
+  index--;
+  showSlide(index);
+});
+</script>
     
 </body>
 
 </html>
+
 
 
 
