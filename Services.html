@@ -128,10 +128,157 @@
 <p><strong>Caption:</strong> Get exact paint matches and restore your car’s original look.</p>
 <hr>
     </section>
-                    
+
+    <section id="services">
+  <h2>Our Services</h2>
+
+  <div class="slider-container">
+    <button class="prev">&#10094;</button>
+    <div class="slider">
+
+      <div class="slide">
+        <img src="PREMIUM%20CARWASH.jpeg" alt="Premium Car Wash">
+        <p>Premium Car Wash – Keep your car spotless and shining.</p>
+      </div>
+
+      <div class="slide">
+        <img src="MAKE%20YOUR%20CAR%20SHINE.jpeg" alt="Car Shine">
+        <p>Detailing – Make your car shine like brand new.</p>
+      </div>
+
+      <div class="slide">
+        <img src="MAINTAIN%20OPTIMAL%20TIRE%20PRESSURE.jpeg" alt="Tire Pressure">
+        <p>Maintain Tire Pressure – Drive safer and save fuel.</p>
+      </div>
+
+      <div class="slide">
+        <img src="CLEANING%20OF%20ENGINE.jpeg" alt="Engine Cleaning">
+        <p>Engine Cleaning – Improve performance and longevity.</p>
+      </div>
+
+      <div class="slide">
+        <img src="ELECTRICAL%20SYSTEM%20STOCK.jpeg" alt="Electrical System">
+        <p>Electrical System Check – Reliable diagnostics and fixes.</p>
+      </div>
+
+      <div class="slide">
+        <img src="CAR%20DUST%20AND%20SEWAGE%20PROOF.jpeg" alt="Dust Protection">
+        <p>Dust & Sewage Proofing – Protect your car inside and out.</p>
+      </div>
+
+      <div class="slide">
+        <img src="MECHANICAL%20REPAIRS&MAINTENANCE.jpeg" alt="Repairs">
+        <p>Mechanical Repairs – Professional maintenance and fixes.</p>
+      </div>
+
+      <div class="slide">
+        <img src="GENUINE%20ENGINE%20OIL.jpeg" alt="Engine Oil">
+        <p>Genuine Engine Oil – For smooth and lasting performance.</p>
+      </div>
+
+      <div class="slide">
+        <img src="GUIDE%20TO%20MAINTENANCE%20OF%20GERMAN%20CARS.jpeg" alt="German Car Maintenance">
+        <p>Maintenance Guide – Expert care for German cars.</p>
+      </div>
+
+      <div class="slide">
+        <img src="PERFORMANCE%20UPGRADES.jpeg" alt="Performance Upgrades">
+        <p>Performance Upgrades – Unlock your car’s full potential.</p>
+      </div>
+
+      <div class="slide">
+        <img src="CAR%20PAINT%20COLOR%20CODE.jpeg" alt="Paint Code">
+        <p>Paint & Color Code – Match your car’s original factory color.</p>
+      </div>
+
+    </div>
+    <button class="next">&#10095;</button>
+  </div>
+</section>
+
+<style>
+.slider-container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+.slide img {
+  width: 80%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+</style>
+
+<script>
+const servicesSlider = document.querySelector('#services .slider');
+const servicesSlides = document.querySelectorAll('#services .slide');
+const servicesPrev = document.querySelector('#services .prev');
+const servicesNext = document.querySelector('#services .next');
+
+let servicesIndex = 0;
+let servicesAutoSlide;
+
+function showServicesSlide(i) {
+  if (i >= servicesSlides.length) servicesIndex = 0;
+  if (i < 0) servicesIndex = servicesSlides.length - 1;
+  servicesSlider.style.transform = `translateX(${-servicesIndex * 100}%)`;
+}
+
+function startServicesAutoSlide() {
+  servicesAutoSlide = setInterval(() => {
+    servicesIndex++;
+    showServicesSlide(servicesIndex);
+  }, 5000);
+}
+
+function resetServicesAutoSlide() {
+  clearInterval(servicesAutoSlide);
+  startServicesAutoSlide();
+}
+
+servicesNext.addEventListener('click', () => {
+  servicesIndex++;
+  showServicesSlide(servicesIndex);
+  resetServicesAutoSlide();
+});
+
+servicesPrev.addEventListener('click', () => {
+  servicesIndex--;
+  showServicesSlide(servicesIndex);
+  resetServicesAutoSlide();
+});
+
+startServicesAutoSlide();
+</script>
+    
 </body>
 
 </html>
+
 
 
 
