@@ -99,132 +99,145 @@
 <hr>
  </section>
 
-<section id="blog">
-  <h2>Car Blog Showcase</h2>
+<section id="blog" style="margin:40px; text-align:center;">
+  <h1>German Car Legends Blog</h1>
 
-  <div class="slider-container">
-    <button class="prev">&#10094;</button>
-    <div class="slider">
-      
-      <div class="slide">
-        <img src="BLACK%20BMW%20X6%20SUV.jpeg" alt="BMW X6 SUV">
-        <p>BMW X6 SUV – Bold luxury SUV with coupe-inspired styling.</p>
-      </div>
+  <div class="slider">
+    <div class="slides">
 
-      <div class="slide">
-        <img src="BLACK%20CAR.jpeg" alt="BlACK CAR">
-        <p>Black car mercedes – Executive sedan offering unmatched comfort and style.</p>
-      </div>
+      <figure>
+        <img src="BMW%20X6%20SUV.jpeg" alt="BMW X6 SUV">
+        <figcaption>BMW X6 SUV</figcaption>
+      </figure>
 
-      <div class="slide">
+      <figure>
+        <img src="BLACK%20CAR.jpeg" alt="Black Car">
+        <figcaption>BLACK CAR</figcaption>
+      </figure>
+
+      <figure>
         <img src="BMW%20335i.jpeg" alt="BMW 335i">
-        <p>BMW 335i – Compact sports sedan with turbocharged performance.</p>
-      </div>
+        <figcaption>BMW 335i</figcaption>
+      </figure>
 
-      <div class="slide">
-        <img src="BMW%20CABRIOLET.jpeg" alt="BMW CABRIOLET">
-        <p>BMW Cabriolet – Open-top driving experience with German engineering.</p>
-      </div>
+      <figure>
+        <img src="BMW%20CABRIOLET.jpeg" alt="BMW Cabriolet">
+        <figcaption>BMW CABRIOLET</figcaption>
+      </figure>
 
-      <div class="slide">
+      <figure>
         <img src="BMW%20Z4.jpeg" alt="BMW Z4">
-        <p>BMW Z4 – Stylish roadster with sharp handling and power.</p>
-      </div>
+        <figcaption>BMW Z4</figcaption>
+      </figure>
 
-      <div class="slide">
-        <img src="BUGATTI%20VEYRON%20VITESSE.jpeg" alt="BUGATTI VEYRON VITESSE">
-        <p>Bugatti Veyron Vitesse – Hypercar with breathtaking speed and exclusivity.</p>
-      </div>
+      <figure>
+        <img src="BUGATTI%20VEYRON%20VITESSE.jpeg" alt="Bugatti Veyron Vitesse">
+        <figcaption>BUGATTI VEYRON VITESSE</figcaption>
+      </figure>
 
-      <div class="slide">
-        <img src="MERCEDES%20DTM.jpeg" alt="MERCEDES DTM">
-        <p>Mercedes DTM – Track-focused racer with motorsport pedigree.</p>
-      </div>
+      <figure>
+        <img src="MERCEDES%20DTM.jpeg" alt="Mercedes DTM">
+        <figcaption>MERCEDES DTM</figcaption>
+      </figure>
 
-      <div class="slide">
-        <img src="MERCEDES%20MCLAREN%20SLR.jpeg" alt="MERCEDES MCLAREN SLR">
-        <p>Mercedes McLaren SLR – Legendary collaboration of performance and luxury.</p>
-      </div>
+      <figure>
+        <img src="MERCEDES%20MCLAREN%20SLR.jpeg" alt="Mercedes McLaren SLR">
+        <figcaption>MERCEDES MCLAREN SLR</figcaption>
+      </figure>
 
-      <div class="slide">
-        <img src="VOLKSWAGEN%20GOLF%20R.jpeg" alt="VOLKSWAGEN GOLF R">
-        <p>Volkswagen Golf R – Hot hatch with AWD and turbocharged power.</p>
-      </div>
+      <figure>
+        <img src="VOLKSWAGEN%20GOLF%20R.jpeg" alt="Volkswagen Golf R">
+        <figcaption>VOLKSWAGEN GOLF R</figcaption>
+      </figure>
 
-      <div class="slide">
-        <img src="VW%20GOLF%20GTI.jpeg" alt="VW GOLF GTI">
-        <p>VW Golf GTI – The original hot hatch, sporty and practical.</p>
-      </div>
+      <figure>
+        <img src="VW%20GOLF%20GTI.jpeg" alt="VW Golf GTI">
+        <figcaption>VW GOLF GTI</figcaption>
+      </figure>
 
     </div>
-    <button class="next">&#10095;</button>
+
+    <!-- Manual navigation arrows -->
+    <div class="navigation-manual">
+      <span class="manual-btn" onclick="moveSlide(-1)">&#10094;</span>
+      <span class="manual-btn" onclick="moveSlide(1)">&#10095;</span>
+    </div>
   </div>
 </section>
 
 <style>
-.slider-container {
-  position: relative;
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
-}
+  .slider {
+    position: relative;
+    width: 500px;
+    margin: auto;
+    overflow: hidden;
+    border: 2px solid #000;
+    border-radius: 10px;
+  }
 
-.slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
+  .slides {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    width: 100%;
+  }
 
-.slide {
-  min-width: 100%;
-  box-sizing: border-box;
-  text-align: center;
-}
+  .slides figure {
+    min-width: 100%;
+    margin: 0;
+    text-align: center;
+  }
 
-.slide img {
-  width: 80%;
-  max-height: 400px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 24px;
-}
-.prev { left: 10px; }
-.next { right: 10px; }
+  .slides img {
+    width: 100%;
+    border-bottom: 2px solid #000;
+  }
+
+  figcaption {
+    background: #f1f1f1;
+    padding: 8px;
+    font-weight: bold;
+  }
+
+  .navigation-manual {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+
+  .manual-btn {
+    cursor: pointer;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 50%;
+    font-size: 20px;
+    user-select: none;
+  }
 </style>
 
 <script>
-const slider = document.querySelector('.slider');
-const slides = document.querySelectorAll('.slide');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
+  let index = 0;
+  const slides = document.querySelector('.slides');
+  const totalSlides = document.querySelectorAll('.slides figure').length;
 
-let index = 0;
+  function showSlide(i) {
+    index = (i + totalSlides) % totalSlides;
+    slides.style.transform = `translateX(${-index * 100}%)`;
+  }
 
-function showSlide(i) {
-  if (i >= slides.length) index = 0;
-  if (i < 0) index = slides.length - 1;
-  slider.style.transform = `translateX(${-index * 100}%)`;
-}
+  function moveSlide(step) {
+    showSlide(index + step);
+  }
 
-nextBtn.addEventListener('click', () => {
-  index++;
-  showSlide(index);
-});
-
-prevBtn.addEventListener('click', () => {
-  index--;
-  showSlide(index);
-});
+  // Auto-slide every 3 seconds
+  setInterval(() => {
+    showSlide(index + 1);
+  }, 3000);
 </script>
+
 
  <section id="blog-gallery" style="text-align:center;">
 
@@ -295,6 +308,7 @@ prevBtn.addEventListener('click', () => {
 </body>
 
 </html>
+
 
 
 
