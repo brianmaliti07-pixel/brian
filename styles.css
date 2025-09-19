@@ -250,28 +250,35 @@
 
     }
 
+/* Parent box - this will hold BOTH p + ul */
 .service-box {
   background: #fff;            
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  margin-top: 20px;
+  margin: 20px auto;
+  max-width: 800px; /*optional for nice centering */
 }
 
-.service-box p {
-  margin-bottom: 15px;         /* brings UL closer */
-  line-height:1.6;
+/* Reset p and ul so they don't create their own boxes */
+.service-box p 
+.service-box ul {
+  background: none;
+  border: none;
+  box-shadow: none;        
+  margin: 0 0 15px 0;       /* space between p and ul */
 }
 
-.service-box .merged-list {
-  list-style: none;            
-  margin: 0;                   
-  padding: 0;                  
+/*UL neat style */
+.service-box ul {
+  list-style: none;                               
+  padding-left: 0;                  
 }
 
-.service-box .merged-list li {
+.service-box ul li {
   margin: 5px 0;
 }
+
 
 
 
