@@ -250,8 +250,8 @@
 
     }
 
-    .service-box {
-  background: #fff;             /* one box */
+.service-box {
+  background: #fff;            
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -259,19 +259,19 @@
 }
 
 .service-box p {
-  margin-bottom: 15px;         /* spacing before list */
+  margin-bottom: 15px;         /* small gap so UL feels connected */
   line-height:1.6;
 }
 
-.service-box ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.service-box .merged-list {
+  list-style: none;            /* removes browser default bullets */
+  margin: 0;                   /* removes default indent */
+  padding: 0;                  /* removes extra gap above/below */
 }
 
-.service-content ul li {
-  margin: 4px 0;
-  padding-left:0;
+.service-box .merged-list li {
+  margin: 5px 0;
 }
+
 
 
