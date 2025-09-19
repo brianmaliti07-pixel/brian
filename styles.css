@@ -261,12 +261,10 @@
 }
 
 
-.service-box p 
-.service-box ul {
+ p,ul {
   background: none !important;
   border: none !important;
-  box-shadow: none !important;        
-  margin: 0 0 15px 0 !important;       
+  box-shadow: none !important;              
 }
 
 /*UL neat style */
@@ -278,6 +276,7 @@
 .service-box ul li {
   margin: 5px 0;
 }
+
 
 
 
