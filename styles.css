@@ -260,13 +260,13 @@
   max-width: 800px; /*optional for nice centering */
 }
 
-/* Reset p and ul so they don't create their own boxes */
+
 .service-box p 
 .service-box ul {
-  background: none;
-  border: none;
-  box-shadow: none;        
-  margin: 0 0 15px 0;       /* space between p and ul */
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;        
+  margin: 0 0 15px 0 !important;       
 }
 
 /*UL neat style */
@@ -278,6 +278,7 @@
 .service-box ul li {
   margin: 5px 0;
 }
+
 
 
 
